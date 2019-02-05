@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Hribolazci</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -13,11 +13,14 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #fff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                background-image: url('/svg/bg.jpeg');
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .full-height {
@@ -49,7 +52,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -61,11 +64,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            body{
-                background-image: url(resources/img/hills_bg.jpg);
-                background-size: cover;
-                background-repeat: :no-repeat;
-            }
+
         </style>
     </head>
     <body>
@@ -86,7 +85,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Hribolazci
                 </div>
 
                 <div class="links">
