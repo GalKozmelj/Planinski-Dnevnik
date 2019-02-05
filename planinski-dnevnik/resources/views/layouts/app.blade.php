@@ -40,7 +40,7 @@
     <div id="app">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a style="font-family: sexyFont1;font-size:30px;color:white;" class="navbar-brand" href="{{ url('/') }}">
+                <a style="font-family: sexyFont1;font-size:50px;color:white;" class="navbar-brand" href="{{ url('/') }}">
                     Hribolazci.com
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -58,11 +58,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="color:white" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a style="color:white" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
