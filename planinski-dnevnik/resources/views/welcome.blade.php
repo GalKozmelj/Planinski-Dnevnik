@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="svg/favicon/favicon.ico" sizes="16x16 32x32" type="image/png">
 
         <title>Hribolazci</title>
 
@@ -11,14 +12,23 @@
 
         <!-- Styles -->
         <style>
+
+            @font-face{
+                font-family: sexyFont1;
+                src: url('/fonts/sexyFont1.ttf');
+
+            }
+
+
+
             html, body {
                 background-color: #fff;
                 color: #fff;
-                font-family: 'Nunito', sans-serif;
+                font-family: 'arial';
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background-image: url('/svg/bg.jpeg');
+                background-image: url('/svg/bg2.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
             }
@@ -59,10 +69,16 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                
             }
 
             .m-b-md {
                 margin-bottom: 30px;
+                font-family: 'sexyFont1';
+                
+            }
+            .links a:hover{
+                background-color: rgba(255,255,255,0.5);
             }
 
         </style>
@@ -85,16 +101,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hribolazci
+                    Hribolazci.com
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a style="border:solid white 2px; padding: 20px;" href="https://laravel.com/docs">Getting started</a>
                 </div>
             </div>
         </div>
