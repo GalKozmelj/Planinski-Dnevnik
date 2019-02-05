@@ -71,14 +71,25 @@
                 text-transform: uppercase;
                 
             }
+            .links1 > a {
+                color: #fff;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
                 font-family: 'sexyFont1';
                 
             }
-            .links a:hover{
+            .links1 a:hover{
                 background-color: rgba(255,255,255,0.5);
+
             }
 
         </style>
@@ -104,7 +115,8 @@
                     Hribolazci.com
                 </div>
 
-                <div class="links">
+
+                <div class="links1">
                     <a style="border:solid white 2px; padding: 20px;" href="https://laravel.com/docs">Getting started</a>
                 </div>
             </div>
