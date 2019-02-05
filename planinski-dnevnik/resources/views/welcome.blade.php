@@ -61,6 +61,11 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            body{
+                background-image: url(resources/img/hills_bg.jpg);
+                background-size: cover;
+                background-repeat: :no-repeat;
+            }
         </style>
     </head>
     <body>
