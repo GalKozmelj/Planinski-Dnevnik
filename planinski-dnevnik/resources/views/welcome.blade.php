@@ -69,8 +69,15 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-                
+                padding: 20px;                
             }
+
+            .links a:hover{
+                border-bottom: 2px solid white;
+            }
+
+
+
             .links1 > a {
                 color: #fff;
                 padding: 0 25px;
@@ -117,7 +124,7 @@
 
 
                 <div class="links1">
-                    <a style="border:solid white 2px; padding: 20px;" href="https://laravel.com/docs">Getting started</a>
+                    <a style="border:solid white 2px; padding: 20px;" href="{{ route('login') }}">Getting started</a>
                 </div>
             </div>
         </div>
