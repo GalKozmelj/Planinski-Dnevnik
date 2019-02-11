@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="svg/favicon/favicon.ico" sizes="16x16 32x32" type="image/png">
+    <link rel="icon" href="svg/favicon/favicon.ic   o" sizes="16x16 32x32" type="image/png">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -40,7 +40,7 @@
     <div id="app">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a style="font-family: sexyFont1;font-size:60px;color:white;margin-left:25%" class="navbar-brand" href="{{ url('/') }}">
+                <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:10%;" class="navbar-brand" href="{{ url('/') }}">
                     Hribolazci.com
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -54,7 +54,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" style="margin-right:190px;margin-top:190px;">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

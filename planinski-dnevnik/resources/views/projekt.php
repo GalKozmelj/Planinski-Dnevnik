@@ -13,7 +13,7 @@
                     <div class="card-body">
                     </div>
                     <div class="card-body">
-
+            
                         <form method="POST" action="#">
                             <input style="width:100%;padding:10px;" placeholder="Vnesite mesto ki ga želite poiskati" type="text">
                         </form>
