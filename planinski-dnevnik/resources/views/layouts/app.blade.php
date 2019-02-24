@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="svg/favicon/favicon.ic   o" sizes="16x16 32x32" type="image/png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="svg/favicon/favicon.ico" sizes="16x16 32x32" type="image/png">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -33,63 +33,39 @@
                     @endif
 
                     You are now online!
-                    {{-- <div style="width: 100%"><iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create route map</a></iframe></div><br /> --}}
 
-                    <style>
-                        /* Always set the map height explicitly to define the size of the div
-                         * element that contains the map. */
-                        #map {
-                          height: 100%;
+                    <script>
+                var options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+                };
+
+                function success(pos) {
+                var crd = pos.coords;
+
+                console.log('Your current position is:');
+                console.log(`Latitude : ${crd.latitude}`);
+                console.log(`Longitude: ${crd.longitude}`);
+                console.log(`More or less ${crd.accuracy} meters.`);
+                }
+
+                function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+                }
+
+                navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+                        function showPosition(position) {
+                            var latlon = position.coords.latitude + "," + position.coords.longitude;
+                        
+                            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=4000x3000&sensor=false&key=AIzaSyDtd4dApZV0I6XKuWxcDIdQcfbWoem_ogc";
+                        
+                            document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
                         }
-                        /* Optional: Makes the sample page fill the window. */
+                        </script>
 
-                      </style>
-<div id="map"></div>
-<script>
-  // Note: This example requires that you consent to location sharing when
-  // prompted by your browser. If you see the error "The Geolocation service
-  // failed.", it means you probably did not give permission for the browser to
-  // locate you.
-  var map, infoWindow;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 6
-    });
-    infoWindow = new google.maps.InfoWindow;
-
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos);
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  }
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-                          'Error: The Geolocation service failed.' :
-                          'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-  }
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKS99WQSkH26BMXvdB8FxHds2yeg93OjY&callback=initMap">
-</script>
 
                 </div>
             </div>
