@@ -19,7 +19,9 @@
                         </form>
                     </div>
 
+                    
 
+                {{-- KARTICA --}}
 
                 <div class="card-header">Maps</div>
                 <div class="card-body">
@@ -34,7 +36,11 @@
 
                     You are now online!
 
-                    <script>
+
+
+                {{-- GOOGLE MAPS --}}
+
+                <script>
                 var options = {
                 enableHighAccuracy: true,
                 timeout: 5000,
@@ -64,10 +70,10 @@
                         
                             document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
                         }
-                        </script>
+                </script>
 
 
-                </div>
+                </div>   
             </div>
         </div>
     </div>
