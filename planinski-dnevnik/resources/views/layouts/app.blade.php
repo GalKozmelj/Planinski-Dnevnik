@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtd4dApZV0I6XKuWxcDIdQcfbWoem_ogc"></script>
-    <link rel="icon" href="svg/favicon/favicon.ico" sizes="16x16 32x32" type="image/png">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }} ">
 
 
-    <title>Hribolazci</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="icon" href="svg/favicon/favicon.ico" sizes="16x16 32x32" type="image/png">
 
 
-    <!-- Styles -->
+    {{-- LEAFLET MAPS link --}}
 
-        <style>
-        @font-face{
-        font-family: sexyFont1;
-        src: url('/fonts/sexyFont1.ttf');
-        }   
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
 
-        body a#navbarDropdown{
-            color: white !important;
-        }
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
 
-        </style>
-        
-
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>Hribolazci</title>
+    
 </head>
+
+
+
+
+
+
 <body style="background-image: url('/svg/bg2.jpg'); background-size: cover; background-repeat: no-repeat">
+
+        <!-- Styles -->
+
+        <style>
+                @font-face{
+                font-family: sexyFont1;
+                src: url('/fonts/sexyFont1.ttf');
+                }   
+        
+                body a#navbarDropdown{
+                    color: white !important;
+                }
+        
+                </style>
+                
+    
     <div id="app">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">

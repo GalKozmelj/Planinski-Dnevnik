@@ -13,6 +13,7 @@
                     <div class="card-body">
 
                         <form method="POST" action="#">
+                            @csrf
                             <input style="width:100%;padding:10px;" placeholder="Vnesite mesto ki ga želite poiskati" type="text">
                         </form>
                     </div>
@@ -32,40 +33,20 @@
 
                     You are now online!
 
-                        <script>
-                        function getLocation() {
-                            if (navigator.geolocation) {
-                                navigator.geolocation.getCurrentPosition(showPosition);
-                            } else {
-                                //x.innerHTML = "Geolocation is not supported by this browser.";
-                            }
-                            }
 
-                            function showPosition(position) {
-                            /*x.innerHTML = "Latitude: " + position.coords.latitude +
-                            "<br>Longitude: " + position.coords.longitude;
-                            */
-                            console.log(position.coords.latitude);
-                            console.log(position.coords.longitude);
+                    {{-- LEAFLET --}}
+                    <div style="height: 180px;" id="mapid"></div>
 
-                            }
+                    <script>
+                        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-                            function loadMap() {
-                            var mapOptions = {
-                                center: new google.maps.LatLng(22.719840899999998, 75.8824308),
-                                zoom: 13,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP
-                            };
-
-                            var map = new google.maps.Map(document.getElementById("sample"), mapOptions);
-                            console.log(map);
-                            }
-                        </script>
-                        
-                        <div onload="getLocation()">
-                                <div id="sample" style="width:100%; height:580px;"></div>
-                                <button onclick="loadMap()">Show Map</button>
-                        </div>
+                        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZ2Fsa296bWVsaiIsImEiOiJjanN2ajRqNnowM3lyNDNxazY0cXFubXFnIn0.asRIOOwyMjgXxKGLYcZG-w', {
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        maxZoom: 18,
+                        id: 'mapbox.streets',
+                        accessToken: 'your.mapbox.access.token'
+                    }).addTo(mymap);
+                    </script>
 
 
                 </div>
