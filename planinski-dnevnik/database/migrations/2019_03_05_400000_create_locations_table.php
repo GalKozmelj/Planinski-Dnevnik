@@ -18,6 +18,8 @@ class CreateLocationsTable extends Migration
             $table->integer('country_id')->unsigned();
             $table->foreign('country_id')->references('id')->on('countries');
             $table->string('name');
+            $table->string('desc');
+            $table->integer('height');
             $table->double('lat');
             $table->double('lon');
             $table->timestamps();
