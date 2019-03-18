@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    use FormAccessible;
-    protected $table = 'comments';
+    protected $table = 'countries';
     //Primary key
     public $primaryKey = 'id';
     //Timestamp
