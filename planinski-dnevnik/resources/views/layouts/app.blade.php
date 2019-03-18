@@ -40,7 +40,7 @@
 
 
 
-<body style="background-image: url('/svg/bg2.jpg'); background-size: cover; background-repeat: no-repeat">
+<body style="background-image: url('/svg/w3.jpg'); background-size: cover; background-repeat: no-repeat">
 
         <!-- Styles -->
 

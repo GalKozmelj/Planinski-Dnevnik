@@ -28,7 +28,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background-image: url('/svg/bg2.jpg');
+                background-image: url('/svg/w1.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
             }

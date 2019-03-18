@@ -7,24 +7,11 @@
         <div class="col-md-8">
             <div class="card">
 
-                    <div class="card-header">Search</div>
-                    <div class="card-body">
-                    </div>
-                    <div class="card-body">
-
-                        <form method="POST" action="#">
-                            @csrf
-                            <input style="width:100%;padding:10px;" placeholder="Vnesite mesto ki ga želite poiskati" type="text">
-                        </form>
-                    </div>
 
 
 
-                <div class="card-header">Maps</div>
-                <div class="card-body">
-                    You are now located in:
-                </div>
-                <div class="card-body">
+
+                <div class="card-body" style="">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
