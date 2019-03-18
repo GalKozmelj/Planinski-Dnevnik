@@ -11,7 +11,6 @@
 
 
 
-                <div class="card-body" style="">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -20,7 +19,7 @@
 
 
                     {{-- LEAFLET --}}
-                    <div style="height: 180px;" id="mapid"></div>
+                    <div style="height: 380px;border:5px solid white;" id="mapid"></div>
 
                     <script>
 
@@ -40,7 +39,6 @@
                     </script>
 
 
-                </div>
             </div>
         </div>
     </div>
