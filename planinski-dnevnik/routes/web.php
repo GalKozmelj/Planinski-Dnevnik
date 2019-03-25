@@ -21,7 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/admin', 'AdminController');
 Route::resources([
-    'countries' => 'CountryController'
+    'countries' => 'CountryController',
+    'locations' => 'LocationController'
 ]);
 Auth::routes();
 

@@ -6,24 +6,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
-
-
-
-
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-
                     {{-- LEAFLET --}}
                     <div style="height: 380px;border:5px solid white;" id="mapid"></div>
 
-                    <script>
-
-                        
+                    <script>                   
                     navigator.geolocation.getCurrentPosition(function(location) {
                     var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
 
@@ -34,8 +26,6 @@
 
                     var marker = L.marker(latlng).addTo(mymap);
                     });
-
-
                     </script>
 
 
