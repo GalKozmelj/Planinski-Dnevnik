@@ -71,7 +71,7 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.6;
-    color: #212529;
+    color: #fff;
     text-align: left;
     background-color: #f8fafc;
 }
@@ -3387,7 +3387,7 @@ input[type="submit"].btn-block {
 .nav-tabs {
     border-bottom: 1px solid #dee2e6;
 }
-.nav-tabs .nav-item {
+.nav-tabs .nav-item {   
     margin-bottom: -1px;
 }
 .nav-tabs .nav-link {

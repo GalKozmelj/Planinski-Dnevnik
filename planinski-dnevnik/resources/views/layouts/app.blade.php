@@ -40,7 +40,7 @@
 
 
 
-<body style="background-image: url('/svg/w4.jpg'); background-size: cover; background-repeat: no-repeat">
+<body style="background-image: url('/svg/w2.jpg'); background-size: cover; background-repeat: no-repeat">
 
         <!-- Styles -->
 
@@ -57,9 +57,9 @@
                 </style>
                 
     
-    <div id="app">
+    <div id="app" style="margin-top:3%;">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
+            <div class="container" style="background-color: #93afbb; width:50%;height:200px;margin-top:3%;border-bottom:5px solid #fff">
                 <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:10%;" class="navbar-brand" href="{{ url('/') }}">
                     Hribolazci.com
                 </a>
@@ -73,8 +73,9 @@
 
                     </ul>
 
+
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto" style="margin-right:190px;margin-top:190px;">
+                    <ul class="navbar-nav ml-auto" style="margin-right:100px;margin-top:100px;">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

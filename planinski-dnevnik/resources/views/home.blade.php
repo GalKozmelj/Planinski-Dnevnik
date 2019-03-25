@@ -1,4 +1,4 @@
--@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -19,7 +19,7 @@
 
 
                     {{-- LEAFLET --}}
-                    <div style="height: 380px;border:5px solid white;" id="mapid"></div>
+                    <div style="height: 400px;border:5px solid white;" id="mapid"></div>
 
                     <script>
 
