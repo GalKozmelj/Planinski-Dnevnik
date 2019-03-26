@@ -57,10 +57,10 @@
                 </style>
                 
     
-    <div id="app" style="margin-top:3%;">
+    <div id="app">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container" style="background-color: #93afbb; width:50%;height:200px;margin-top:2%;border-bottom:5px solid #fff;border-radius: 25% 25px;opacity:0.8">
-                <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:10%;" class="navbar-brand" href="{{ url('/') }}">
+            <div class="container" style="background-color: #93afbb; width:50%;height:200px;margin-top:1%;border-bottom:5px solid #8aa4af;border-top:5px solid #8aa4af;border-radius:50px 50px 15px 15px; opacity:0.8">
+                <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:5%;" class="navbar-brand" href="{{ url('/') }}">
                     Hribolazci.com
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,11 +79,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a style="color:white;border-bottom: 2px solid white;" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a style="color:white;border-bottom: 2px solid white;" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
