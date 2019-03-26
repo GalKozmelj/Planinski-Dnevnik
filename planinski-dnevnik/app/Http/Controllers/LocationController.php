@@ -7,6 +7,14 @@ use App\Location;
 
 class LocationController extends Controller
 {
+
+    public function search(Request $request){
+        $name = $request->input('name');
+
+        $location = Location::where('name', $name)->get();
+        
+        return view('home', ['location' => $location]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,7 @@ class LocationController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**

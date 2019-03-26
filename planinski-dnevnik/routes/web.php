@@ -16,14 +16,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function(){
 
-Route::get('/home', 'HomeController@index')->name('home');
+});
+
+Route::get('search', 'HomeController@search');
+
+
 
 Route::resource('/admin', 'AdminController');
 Route::resources([
+    'admin' => 'AdminController',
+    'home' => 'HomeController',
     'countries' => 'CountryController',
     'locations' => 'LocationController'
 ]);
 Auth::routes();
-
-
