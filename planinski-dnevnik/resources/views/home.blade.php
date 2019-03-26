@@ -13,7 +13,7 @@
                     @endif
 
                     {{-- LEAFLET --}}
-                    <div style="height: 400px;border:5px solid white;" id="mapid"></div>
+                    <div style="height: 400px;border:5px solid #93afbb;" id="mapid"></div>
 
                     <script>                   
                     navigator.geolocation.getCurrentPosition(function(location) {
