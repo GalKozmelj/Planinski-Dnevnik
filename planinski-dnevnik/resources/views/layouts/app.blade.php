@@ -59,8 +59,8 @@
     
     <div id="app">
         <nav style="background-color:rgba(255, 255, 255, 0);border:0;" class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container" style="background-color: #93afbb; width:50%;height:200px;margin-top:1%;border-bottom:5px solid #8aa4af;border-top:5px solid #8aa4af;border-radius:50px 50px 50px 50px; opacity:0.8">
-                <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:5%;" class="navbar-brand" href="{{ url('/') }}">
+            <div class="container" style="background-color: #93afbb; width:50%;height:200px;margin-top:1%;border-bottom:5px solid #8aa4af;border-top:5px solid #8aa4af;border-radius:15px 50px 50px 15px; opacity:1">
+                <a style="font-family: sexyFont1;font-size:80px;color:white;width:100%;text-align:center;margin-top:5%;margin-left:-150px;" class="navbar-brand" href="{{ url('/') }}">
                     Hribolazci.com
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
