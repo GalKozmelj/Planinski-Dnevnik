@@ -20,8 +20,6 @@ Route::get('/home', function(){
 
 });
 
-Route::get('search', 'HomeController@search');
-
 
 
 Route::resource('/admin', 'AdminController');

@@ -4,18 +4,7 @@
 
 <div class="container">
 
-    {{--
-    teoretično bo tule en form u kirga boš napisu ime lokacije pol to bo to pokazalo na mapi
-    pol pa odspodi še seznam useh objam na tisti lokaciji
-    izi če mene uprašaš :)    
---}}    
-
-    {{Form::open(array('route' => 'locations.search'))}}
-        {{ Form::text('name', '', ['required' => 'required', 'placeholder' => 'Iščite lokacije'])}}
-        {{ Form::submit()}}
-    {{Form::close()}}
-
-
+ 
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
