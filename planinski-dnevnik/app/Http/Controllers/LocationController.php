@@ -9,7 +9,7 @@ class LocationController extends Controller
 {
 
     public function search(Request $request){
-        return redirect('home');
+        return view('home', ['location' => 'Triglav']);
     }
     /**
      * Display a listing of the resource.
