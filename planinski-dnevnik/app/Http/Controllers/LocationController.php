@@ -9,7 +9,10 @@ class LocationController extends Controller
 {
 
     public function search(Request $request){
-        return view('home', ['location' => 'Triglav']);
+        $name = $request->input('name');
+        $location = Location::where('name', $name);
+
+        return view('location', ['location' => $location])
     }
     /**
      * Display a listing of the resource.

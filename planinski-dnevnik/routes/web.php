@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/home/search', 'LocationController@search');
+Route::post('/profile/search', 'LocationController@search');
 
 Route::resources([
     'admin' => 'AdminController',
