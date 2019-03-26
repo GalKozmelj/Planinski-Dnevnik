@@ -11,7 +11,7 @@
             
             <div class="card">
                 <form action="">
-                    <p style="color: #93afbb; text-align:center">Search:<input style="width:100%;border:1px solid white" type="text"></p>
+                    <p style="color: #93afbb; text-align:center">Kam želite oditi na pohod?<input style="width:100%;border:1px solid white" type="text"></p>
                 </form>
             </div>
 
