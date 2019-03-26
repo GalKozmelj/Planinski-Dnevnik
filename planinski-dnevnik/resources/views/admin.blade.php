@@ -26,9 +26,7 @@
     <br>
     {{ Form::text('lat', '', ['required' => 'required', 'placeholder' => 'Latitude'])}}
     {{ Form::text('lon', '', ['required' => 'required', 'placeholder' => 'Longtitude'])}}
-
     {{ Form::select('country', $c_array, '1' ) }}
-   
     {{ Form::submit('Dodaj') }}
   {{ Form::close() }}  
 
