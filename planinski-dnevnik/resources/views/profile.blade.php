@@ -2,4 +2,8 @@
 
 @section('content')
 
+
+hellou
+
+
 @endsection
