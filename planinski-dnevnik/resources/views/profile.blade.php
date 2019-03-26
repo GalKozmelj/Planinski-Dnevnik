@@ -6,7 +6,5 @@
   {{$location->height}}
 
 
-hellou
-
 
 @endsection
