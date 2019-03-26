@@ -10,9 +10,9 @@ class LocationController extends Controller
 
     public function search(Request $request){
         $name = $request->input('name');
-        $location = Location::where('name', $name);
+        $location = Location::where('name', $name)->first();
 
-        return view('location', ['location' => $location])
+        return view('profile', ['location' => $location]);
     }
     /**
      * Display a listing of the resource.
