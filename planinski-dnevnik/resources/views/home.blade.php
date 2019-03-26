@@ -7,6 +7,16 @@
  
     <div class="row justify-content-center">
         <div class="col-md-8">
+            
+            
+            <div class="card">
+                <form action="">
+                    <p style="color: #93afbb; text-align:center">Search:<input style="width:100%;border:1px solid white" type="text"></p>
+                </form>
+            </div>
+
+
+
             <div class="card">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
