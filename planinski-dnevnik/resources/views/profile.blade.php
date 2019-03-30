@@ -18,6 +18,31 @@
                 </table>
     </div>
 
+    
+    
+    <div class="card">
+        {{-- LEAFLET --}}
+        <div style="height: 400px;border:5px solid #93afbb;" id="mapid"></div>
+        <script>                   
+        window.onload = function(){
+            var latlng = new L.LatLng(@json($location->lat), @json($location->lon));
+            
+            var mymap = L.map('mapid').setView(latlng, 15)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mymap);
+
+            var marker = L.marker(latlng).addTo(mymap);
+            
+            var circle = L.circle(latlng, {
+                color: 'blue',
+                fillColor: '#bb99ff',
+                fillOpacity: 0.5,
+                radius: 50
+            }).addTo(mymap);
+        };
+        </script>
+
     <div class="card" style="color: #93afbb">
             <h1 style="text-align:center;padding:10px;">Objave</h1>
             <hr>
@@ -25,6 +50,9 @@
     </div>
 
 
+
+
+</div>
 
     </div>
 </div>
