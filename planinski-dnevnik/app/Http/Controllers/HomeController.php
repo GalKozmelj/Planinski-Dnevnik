@@ -29,8 +29,9 @@ class HomeController extends Controller
     public function findLocation(Request $request){
         $lat = $request->lat;
 
-        session(['var' => $lat]);
+        session(['success' => true, 'lat' => $lat]);
 
-        return response()->json(['success' => $lat]);
+        return response()->json(['success' => true, 'lat'=>$lat]);
+
     }
 }

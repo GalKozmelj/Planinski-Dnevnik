@@ -20,22 +20,26 @@
                 {{Form::close()}}
             </div>
 
-            @if(session('var'))
-            @php
-                $var = session('var');
-            @endphp
-                {{$var}}
-
-
-            <div class="card">
-            @endif
-
+            <div class="location-div">
+                @if(session('var'))
+                @php
+                    $success = session('success');
+                    $var = session('lat');
+                    
+                @endphp
+                    {{$var}}
+            
+                   
+                @endif
+            </div>
                     {{-- LEAFLET --}}
-                    <div style="height: 400px;border:5px solid #93afbb;" id="mapid"></div>
+                    <div style="height: 400px; border:5px solid #93afbb;" id="mapid"></div>
 
                     <script>  
                     jQuery(document).ready(function(){
                         navigator.geolocation.getCurrentPosition(function(location) {
+                            var locDiv = $('.location-div');
+                            
                             var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
                             var mymap = L.map('mapid').setView(latlng, 13);
 
@@ -60,7 +64,7 @@
     
                             },
                             success: function(result){
-                                console.log(result);
+                                
                             }
                             });      
                         });
