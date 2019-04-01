@@ -5,8 +5,8 @@
 
     @php
         $location_data = \App\Post::where('location_id', $location->id)->get();
-/*         $user_data = \App\Post::where($user->id, $location->user_id)->get();
- */
+        /* $user_data = \App\Post::where($user->id, $location->user_id)->get(); */
+ 
     @endphp
 
 
@@ -72,7 +72,7 @@
 
                 </p>
                 
-                
+
                 <p style="clear:both"><b>Post desc</b> 
                     {{--  When you're using get() you get a collection. In this case you need to iterate over it to get properties:         --}}                    
                     @foreach ($location_data as $object)
