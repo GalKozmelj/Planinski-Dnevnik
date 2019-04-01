@@ -24,7 +24,8 @@ Route::post('/profile', 'LocationController@search');
 Route::resources([
     'admin' => 'AdminController',
     'countries' => 'CountryController',
-    'locations' => 'LocationController'
+    'locations' => 'LocationController',
+    'posts' => 'PostController'
 ]);
 
 Auth::routes();

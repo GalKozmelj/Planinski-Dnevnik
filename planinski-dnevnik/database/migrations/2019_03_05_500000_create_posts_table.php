@@ -20,6 +20,8 @@ class CreatePostsTable extends Migration
             $table->integer('location_id')->unsigned();
             $table->foreign('location_id')->references('id')->on('locations');
             $table->mediumText('content');
+            $table->double('lat');
+            $table->double('lon');
             $table->timestamps();
         });
     }

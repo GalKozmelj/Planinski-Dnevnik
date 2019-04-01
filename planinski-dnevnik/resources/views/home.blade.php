@@ -20,15 +20,9 @@
                 {{Form::close()}}
             </div>
 
-            @if(session('var'))
-            @php
-                $var = session('var');
-            @endphp
-                {{$var}}
+            <div class="location-div">
 
-
-            <div class="card">
-            @endif
+            </div>
 
                     {{-- LEAFLET --}}
                     <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
@@ -36,6 +30,8 @@
                     <script>  
                     jQuery(document).ready(function(){
                         navigator.geolocation.getCurrentPosition(function(location) {
+                            var locDiv = $('.location-div');
+                            
                             var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
                             var mymap = L.map('mapid').setView(latlng, 13);
 
@@ -56,11 +52,12 @@
                             url: "{{ url('/home/post') }}",
                             method: 'get',
                             data: {
-                                lat: 'whatever',
+                                lat: location.coords.latitude,
+                                lon: location.coords.longitude
     
                             },
                             success: function(result){
-                                console.log(result);
+                                $('.location-div').html(result);
                             }
                             });      
                         });
