@@ -5,8 +5,8 @@
 
     @php
         $location_data = \App\Post::where('location_id', $location->id)->get();
-        $user_data = \App\Post::where($user->id, $location->user_id)->get();
-
+/*         $user_data = \App\Post::where($user->id, $location->user_id)->get();
+ */
     @endphp
 
 
