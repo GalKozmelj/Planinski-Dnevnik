@@ -20,6 +20,15 @@ Route::get('seznam', function () {
     return view('seznam');
 });
 
+Route::get('check_location', function () {
+    return view('check_location');
+});
+
+Route::get('/refresh', function () {
+    return view('home');
+});
+
+
 
 Route::get('/home', 'HomeController@index');
 

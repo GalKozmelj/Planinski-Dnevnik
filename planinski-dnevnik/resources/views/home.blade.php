@@ -25,7 +25,7 @@
             </div>
 
                     {{-- LEAFLET --}}
-                    <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
+                    <div style="height: 400px;border:5px solid #96b788;border-bottom: 0px" id="mapid"></div>
 
                     <script>  
                     jQuery(document).ready(function(){
@@ -63,6 +63,11 @@
                         });
                     });
                     </script>
+                        {{Form::open(array('url' => 'home'))}}
+                            <p>
+                            <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Refresh">
+                            </p>
+                        {{Form::close()}}
             </div>
         </div>
     </div>

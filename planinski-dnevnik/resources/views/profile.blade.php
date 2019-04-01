@@ -50,8 +50,11 @@
             }).addTo(mymap);
         };
         </script>
-        
-        <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Check location">
+                        {{Form::open(array('url' => '/check_location'))}}
+                        <p>
+                            <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Check location">
+                        </p>
+                    {{Form::close()}}
 
 
     <div class="card" style="color: #93afbb;margin-top:3%">
