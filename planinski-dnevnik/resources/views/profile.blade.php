@@ -3,9 +3,6 @@
 @section('content')
 <div class="container">
 
-    @php
-        $post = \App\Post::where('location_id', $location->id)->get();
-    @endphp
 
 
 
@@ -50,9 +47,22 @@
         </script>
 
     <div class="card" style="color: #93afbb">
-            <h1 style="text-align:center;padding:10px;">Objave</h1>
-            <hr>
 
+
+             <h1 style="text-align:center;padding:10px;">Objave</h1>
+            <hr>
+            @foreach($posts as $post)
+                {{$post->content}}
+                
+                    
+                @php
+                    use App\User;
+                    $user = App\User::where('id', $post->user_id);    
+                    var_dump($user);
+                @endphp
+                
+            @endforeach
+            {{--
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
                 <p style="float:left"><b style="font-size:20px;"></b></p>
                 <p style="clear:both;color:#ddd">(ustvarjeno: 10.1.2019)</p>
@@ -62,7 +72,8 @@
 
             
 
-            <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo">
+            <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo"> 
+            --}}
         </div>
 
 

@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Location;
+use \App\Post;
 
 class LocationController extends Controller
 {
 
     public function search(Request $request){
         $name = $request->input('name');
-        $location = Location::where('name', $name)->first();
-
-        return view('profile', ['location' => $location]);
+        $location = Location::where('name', $name)->orWhere('name', 'like', '%'.$name.'%')->first();
+        $posts = Post::where('location_id', $location->id)->get();
+        return view('profile', ['location' => $location, 'posts' => $posts]);
     }
     /**
      * Display a listing of the resource.
