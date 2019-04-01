@@ -46,8 +46,20 @@
     <div class="card" style="color: #93afbb">
             <h1 style="text-align:center;padding:10px;">Objave</h1>
             <hr>
+
+            <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
+                <p style="float:left"><b>post name</b></p>
+                <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
+                <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
+            </div>
+            <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
+                <p>post</p>
+                <p>Post desc -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>            
+            </div>
             
-    </div>
+
+            <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo">
+        </div>
 
 
 
