@@ -4,8 +4,12 @@
 <div class="container">
 
     @php
+        use App\User;
+        
+
+
         $location_data = \App\Post::where('location_id', $location->id)->get();
-        $user_data = \App\Post::where($user->id, $location->user_id)->get();
+
 
     @endphp
 
@@ -56,17 +60,6 @@
 
              <h1 style="text-align:center;padding:10px;">Objave</h1>
             <hr>
-            @foreach($posts as $post)
-                {{$post->content}}
-                
-                    
-                @php
-                    use App\User;
-                    $user = App\User::where('id', $post->user_id);    
-                    var_dump($user);
-                @endphp
-                
-            @endforeach
             {{--
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
                 <p style="float:left"><b style="font-size:20px;"></b></p>
@@ -78,12 +71,15 @@
                     @endforeach
 
                 </p>
-                
+                --}}
                 
                 <p style="clear:both"><b>Post desc</b> 
-                    {{--  When you're using get() you get a collection. In this case you need to iterate over it to get properties:         --}}                    
                     @foreach ($location_data as $object)
+                    @php
+                        $user_data = App\User::where('id', $object->user_id)->first();
+                    @endphp
                     {{ $object->content }}
+                    {{ $user_data->name }}
                     @endforeach
                 </p>
             </div>
