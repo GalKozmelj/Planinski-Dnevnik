@@ -17,8 +17,8 @@
   foreach($countries as $c){
     $c_array[$c->id] = $c->name;
   }
-  
   @endphp
+  
   {{ Form::open(array('route' => 'locations.store')) }}
     {{ Form::text('name', '', ['required' => 'required', 'placeholder' => 'Ime lokacije'])}}
     {{ Form::text('desc', '', ['required' => 'required', 'placeholder' => 'Kratek opis'])}}

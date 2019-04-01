@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index');
+Route::get('/home/post', 'HomeController@findLocation');
 
 Route::post('/profile', 'LocationController@search');
 

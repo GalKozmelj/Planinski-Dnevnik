@@ -26,4 +26,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function findLocation(Request $request){
+        $lat = $request->lat;
+
+        session(['var' => $lat]);
+
+        return response()->json(['success' => $lat]);
+    }
 }
