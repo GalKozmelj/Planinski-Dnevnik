@@ -7,7 +7,7 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
 
-    <div class="card" style="color: #93afbb;margin-bottom:10px;">
+    <div class="card" style="color: #96b788;margin-bottom:10px;border-top:3px solid #7e9972">
             <h1 style="text-align:center;padding:10px;">{{$location->name}}</h1>
             <hr>
                 <table cellpadding="10">
@@ -22,7 +22,7 @@
     
     <div class="card">
         {{-- LEAFLET --}}
-        <div style="height: 400px;border:5px solid #93afbb;" id="mapid"></div>
+        <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
         <script>                   
         window.onload = function(){
             var latlng = new L.LatLng(@json($location->lat), @json($location->lon));
@@ -35,8 +35,8 @@
             var marker = L.marker(latlng).addTo(mymap);
             
             var circle = L.circle(latlng, {
-                color: 'blue',
-                fillColor: '#bb99ff',
+                color: 'green',
+                fillColor: '#aaddaa',
                 fillOpacity: 0.5,
                 radius: 50
             }).addTo(mymap);

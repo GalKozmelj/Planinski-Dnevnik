@@ -15,7 +15,7 @@
                         {{ Form::text('name', '', ['required' => 'required', 'style' => 'width:100%;border:1px solid white'])}}
                     </p>
                     <p>
-                        <input type="submit" style="width:100%;background-color:#93afbb;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="išči">
+                        <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="išči">
                     </p>
                 {{Form::close()}}
             </div>
@@ -30,7 +30,7 @@
                     @endif
 
                     {{-- LEAFLET --}}
-                    <div style="height: 400px;border:5px solid #93afbb;" id="mapid"></div>
+                    <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
 
                     <script>                   
                     navigator.geolocation.getCurrentPosition(function(location) {
