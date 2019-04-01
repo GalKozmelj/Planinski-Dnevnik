@@ -53,8 +53,9 @@
                 <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
             </div>
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
-                <p>post</p>
-                <p>Post desc -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>            
+                <p style="float:left"><b>post name</b></p>
+                <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
+                <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
             </div>
             
 
