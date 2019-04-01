@@ -38,7 +38,7 @@
                 color: 'green',
                 fillColor: '#aaddaa',
                 fillOpacity: 0.5,
-                radius: 50
+                radius: 100
             }).addTo(mymap);
         };
         </script>

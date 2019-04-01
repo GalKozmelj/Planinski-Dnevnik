@@ -20,34 +20,55 @@
                 {{Form::close()}}
             </div>
 
+            @if(session('var'))
+            @php
+                $var = session('var');
+            @endphp
+                {{$var}}
 
-    
+
             <div class="card">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            @endif
 
                     {{-- LEAFLET --}}
                     <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
 
-                    <script>                   
-                    navigator.geolocation.getCurrentPosition(function(location) {
-                    var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+                    <script>  
+                    jQuery(document).ready(function(){
+                        navigator.geolocation.getCurrentPosition(function(location) {
+                            var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+                            var mymap = L.map('mapid').setView(latlng, 13);
 
-                    var mymap = L.map('mapid').setView(latlng, 13)
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(mymap);
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            }).addTo(mymap);
 
-                    var marker = L.marker(latlng).addTo(mymap);
+                            var marker = L.marker(latlng).addTo(mymap);
+                            
+                            //AJAX POST zahteva v HomeController, najde najbližjo lokacijo
+                            $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                }
+                            });
+
+                            jQuery.ajax({
+                            url: "{{ url('/home/post') }}",
+                            method: 'get',
+                            data: {
+                                lat: 'whatever',
+    
+                            },
+                            success: function(result){
+                                console.log(result);
+                            }
+                            });      
+                        });
                     });
                     </script>
-
-
             </div>
         </div>
     </div>
 </div>
+
 @endsection
