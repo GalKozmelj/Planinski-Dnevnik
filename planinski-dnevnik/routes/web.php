@@ -16,7 +16,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('seznam', function () {
+    return view('seznam');
+});
+
+
 Route::get('/home', 'HomeController@index');
+
+
+
 Route::get('/home/post', 'HomeController@findLocation');
 
 Route::post('/profile', 'LocationController@search');
