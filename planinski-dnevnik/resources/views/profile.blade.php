@@ -4,8 +4,7 @@
 <div class="container">
 
     @php
-        $county_id = $location->country_id;
-        $post = /app/Post::where('country_id', $country_id);
+        $post = \App\Post::where('country_id', $location->country_id);
     @endphp
 
 
