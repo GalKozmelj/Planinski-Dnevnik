@@ -21,17 +21,9 @@
             </div>
 
             <div class="location-div">
-                @if(session('var'))
-                @php
-                    $success = session('success');
-                    $var = session('lat');
-                    
-                @endphp
-                    {{$var}}
-            
-                   
-                @endif
+
             </div>
+
                     {{-- LEAFLET --}}
                     <div style="height: 400px;border:5px solid #96b788;" id="mapid"></div>
 
@@ -60,11 +52,12 @@
                             url: "{{ url('/home/post') }}",
                             method: 'get',
                             data: {
-                                lat: 'whatever',
+                                lat: location.coords.latitude,
+                                lon: location.coords.longitude
     
                             },
                             success: function(result){
-
+                                $('.location-div').html(result);
                             }
                             });      
                         });
