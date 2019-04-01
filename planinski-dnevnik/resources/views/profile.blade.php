@@ -3,6 +3,13 @@
 @section('content')
 <div class="container">
 
+    @php
+        $county_id = $location->country_id;
+        $post = /app/Post::where('country_id', $country_id);
+    @endphp
+
+
+
  
 <div class="row justify-content-center">
     <div class="col-md-8">
@@ -48,15 +55,12 @@
             <hr>
 
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
-                <p style="float:left"><b>post name</b></p>
+                <p style="float:left"><b style="font-size:20px;">{{-- {{$post->name}} --}}</b></p>
+                <p style="clear:both;color:#ddd">(ustvarjeno: 10.1.2019)</p>
                 <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
                 <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
             </div>
-            <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
-                <p style="float:left"><b>post name</b></p>
-                <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
-                <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
-            </div>
+
             
 
             <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo">
