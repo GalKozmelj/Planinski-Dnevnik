@@ -4,7 +4,9 @@
 <div class="container">
 
     @php
-        $post = \App\Post::where('location_id', $location->id)->get();
+        $location_data = \App\Post::where('location_id', $location->id)->get();
+        $user_data = \App\Post::where($user->id, $location->user_id)->get();
+
     @endphp
 
 
@@ -33,7 +35,7 @@
         window.onload = function(){
             var latlng = new L.LatLng(@json($location->lat), @json($location->lon));
             
-            var mymap = L.map('mapid').setView(latlng, 19)
+            var mymap = L.map('mapid').setView(latlng, 10)
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mymap);
@@ -56,8 +58,21 @@
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
                 <p style="float:left"><b style="font-size:20px;"></b></p>
                 <p style="clear:both;color:#ddd">(ustvarjeno: 10.1.2019)</p>
-                <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
-                <p style="clear:both"><b>Post desc</b> {{$post->content}}</p>
+                <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> 
+                
+                    @foreach ($location_data as $object)
+                    {{ $object->user_id }}
+                    @endforeach
+
+                </p>
+                
+                
+                <p style="clear:both"><b>Post desc</b> 
+                    {{--  When you're using get() you get a collection. In this case you need to iterate over it to get properties:         --}}                    
+                    @foreach ($location_data as $object)
+                    {{ $object->content }}
+                    @endforeach
+                </p>
             </div>
 
             

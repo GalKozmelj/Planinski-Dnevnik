@@ -11,7 +11,7 @@
             
             <div class="card">
                 {{Form::open(array('url' => '/profile'))}}
-                    <p style="color: #93afbb; text-align:center">Kam želite oditi na pohod?
+                    <p style="color: #93afbb; text-align:center; border-bottom: 2px solid #93afbb">Kam želite oditi na pohod?
                         {{ Form::text('name', '', ['required' => 'required', 'style' => 'width:100%;border:1px solid white'])}}
                     </p>
                     <p>
