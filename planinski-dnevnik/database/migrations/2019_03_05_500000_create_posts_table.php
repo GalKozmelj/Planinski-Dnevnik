@@ -19,8 +19,6 @@ class CreatePostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('location_id')->unsigned();
             $table->foreign('location_id')->references('id')->on('locations');
-            $table->integer('image_id')->unsigned();
-            $table->foreign('image_id')->references('id')->on('images');
             $table->mediumText('content');
             $table->timestamps();
         });

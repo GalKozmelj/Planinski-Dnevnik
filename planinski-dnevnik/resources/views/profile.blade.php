@@ -4,7 +4,7 @@
 <div class="container">
 
     @php
-        $post = \App\Post::where('country_id', $location->country_id);
+        $post = \App\Post::where('location_id', $location->id)->get();
     @endphp
 
 
@@ -33,7 +33,7 @@
         window.onload = function(){
             var latlng = new L.LatLng(@json($location->lat), @json($location->lon));
             
-            var mymap = L.map('mapid').setView(latlng, 15)
+            var mymap = L.map('mapid').setView(latlng, 19)
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mymap);
@@ -54,10 +54,10 @@
             <hr>
 
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
-                <p style="float:left"><b style="font-size:20px;">{{-- {{$post->name}} --}}</b></p>
+                <p style="float:left"><b style="font-size:20px;"></b></p>
                 <p style="clear:both;color:#ddd">(ustvarjeno: 10.1.2019)</p>
                 <p style="float:right"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon"> Uporabnik</p>
-                <p style="clear:both"><b>Post desc</b> -sdajsdoasjdaoisjdoaisjdaoisjdoaisjdoaijsdasd</p>
+                <p style="clear:both"><b>Post desc</b> {{$post->content}}</p>
             </div>
 
             
