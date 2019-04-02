@@ -1,6 +1,9 @@
 
-<div class="card" style="margin-top: 5px; color: black; text-align:center">
-Trenutno ste na/v:  <a href="/profile/{{$loc->name}}">{{$loc->name}}</a>
+<div class="card" style="margin-top: 5px; color: black;">
+  @php
+      
+  @endphp
+Trenutno ste na/v:  {{link_to_action('LocationController@redirect', 'trenutna lokacija', ['location_name'=>$loc->name])}}
 
   {{ Form::open(array('route' => 'posts.store')) }}
     {{ Form::textarea('content', '', ['required' => 'required', 'placeholder' => 'Post content'])}}

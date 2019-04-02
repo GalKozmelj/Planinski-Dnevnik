@@ -10,8 +10,15 @@ class LocationController extends Controller
 {
 
     public function search(Request $request){
-        
         $name = $request->input('name');
+        
+        $location = Location::where('name', $name)->orWhere('name', 'like', '%'.$name.'%')->first();
+        $posts = Post::where('location_id', $location->id)->get();
+        return view('profile', ['location' => $location, 'posts' => $posts]);
+    }
+
+    public function redirect($location_name){
+        $name = $location_name;
         
         $location = Location::where('name', $name)->orWhere('name', 'like', '%'.$name.'%')->first();
         $posts = Post::where('location_id', $location->id)->get();
