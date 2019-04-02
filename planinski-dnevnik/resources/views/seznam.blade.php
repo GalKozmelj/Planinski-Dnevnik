@@ -7,7 +7,7 @@
 
 
  
-<div class="row justify-content-center">
+<div class="row justify-content-center" style="color: black">
     <div class="col-md-8">
     <div class="card">
 
@@ -15,7 +15,7 @@
         @php
         use App\User;
         $user_id = \Auth::user()->id;
-        $user_data = \App\UserLocations::where('user_id', $user_id)->get();
+        $user_data = \App\UserLocation::where('user_id', $user_id)->get();
         
  
         @endphp
@@ -24,15 +24,26 @@
 
         @foreach($user_data as $object)
         @php
-            $user_data = App\User::where('id', $object->user_id)->first();        
+            $location = App\Location::where('id', $object->location_id)->first();       
         @endphp
 
-            <p style="clear:both;color:#ddd">{{$object->created_on}}</p>
-            <p style="float:left"><img width="50px;" height="50px;" src="/svg/user_icon.png" alt="user_icon">
+        <p style="padding: 10px; border-bottom: 2px solid lightgray">
+        
+        
+        
+        
 
 
-        {{$user_data->name}}:
-        {{ $object->content }}
+                
+        {{$location->name }}
+        
+        @if($object->bool)
+                {{'✅'}}
+        @endif
+        <span style="float: right;">{{$object->created_at}}</span>
+    
+        </p>
+        
         @endforeach
 
 
