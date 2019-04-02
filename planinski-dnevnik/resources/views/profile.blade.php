@@ -77,7 +77,7 @@
                     @endphp
 
                         <p style="clear:both;color:#ddd">{{$object->created_on}}</p>
-                        <p style="float:left"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon">
+                        <p style="float:left"><img width="50px;" height="50px;" src="/svg/user_icon.png" alt="user_icon">
 
 
                     {{$user_data->name}}:

@@ -20,7 +20,7 @@ Route::get('seznam', function () {
     return view('seznam');
 });
 
-Route::get('check_location', function () {
+Route::get('/check_location', function () {
     return view('check_location');
 });
 
