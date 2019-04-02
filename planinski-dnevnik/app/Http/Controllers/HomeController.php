@@ -35,6 +35,6 @@ class HomeController extends Controller
                                  ->whereBetween('lon', [$lon-0.0011, $lon+0.0011])
                                  ->first();
 
-        return response()->view('make-post', ['lat' => $lat, 'lon'=>$lon, 'loc'=>$location]);
+        return response()->view('make-post', ['lat' => $lat, 'lon'=>$lon, 'location'=>$location]);
     }
 }

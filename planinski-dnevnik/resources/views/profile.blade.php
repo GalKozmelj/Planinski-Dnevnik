@@ -88,7 +88,7 @@
             </div>
 
             
-
+            @include('make-post', ['lat'=>0, 'lon'=>0, 'location'=>$location])
             <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo">
         </div>
 
