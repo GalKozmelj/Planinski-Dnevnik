@@ -60,7 +60,6 @@
 
     <div class="card" style="color: #93afbb;margin-top:3%">
             <h1 style="text-align:center;padding:10px;">Objave</h1>
-            <hr>
 
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
                 
@@ -88,8 +87,7 @@
             </div>
 
             
-            @include('make-post', ['lat'=>0, 'lon'=>0, 'location'=>$location])
-            <input type="submit" style="width:100%;background-color:#96b788;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Ustvari novo objavo">
+            @include('make-post', ['lat'=>0, 'lon'=>0, 'location'=>$location, 'display_link'=>false])
         </div>
 
 
