@@ -25,7 +25,7 @@ class CheckLocationController extends Controller
         $lat = $request->lat;
         $lon = $request->lon;
         $location = Location::where('id', $location_id)->first();
-        
+
         if($location->lat <= $lat+0.011 || $location->lat >= $lat-0.011){
             if($location->lon <= $lon+0.011 || $location->lon >= $lon-0.011){
                 $userlocation = new UserLocation;
@@ -35,12 +35,6 @@ class CheckLocationController extends Controller
                 $userlocation->save();
             }
         }
-
-        $userlocation = new UserLocation;
-        $userlocation->user_id = $user_id;
-        $userlocation->location_id = $location_id;
-        $userlocation->bool = true;
-        $userlocation->save();
 
         return response()->json(['result'=>'bravo šlo je :)']);
     }
