@@ -20,10 +20,10 @@
             <h1 style="text-align:center;padding:10px;">{{$location->name}}</h1>
             <hr>
                 <table cellpadding="10">
-                <tr><td>Nadmorska Visina:</td><td>{{$location->height}}</td></tr>
-                <tr><td>Opis:</td><td>{{$location->description}}</td></tr>
-                <tr><td>latitude:</td><td>{{$location->lat}}</td></tr>
-                <tr><td>longtitude:</td><td>{{$location->lon}}</td></tr>
+                <tr><td>Nadmorska Visina:</td><td>  {{$location->height}}</td></tr>
+                <tr><td>Opis:</td><td>              {{$location->description}}</td></tr>
+                <tr><td>latitude:</td><td>          {{$location->lat}}</td></tr>
+                <tr><td>longtitude:</td><td>        {{$location->lon}}</td></tr>
                 </table>
     </div>
 
@@ -55,22 +55,13 @@
                         <p>
                             <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Check location">
                         </p>
-                    {{Form::close()}}
+                        {{Form::close()}}
 
 
     <div class="card" style="color: #93afbb;margin-top:3%">
             <h1 style="text-align:center;padding:10px;">Objave</h1>
-
             <div class="objava" style=" border-top:solid #ddd 1px; border-bottom:solid #ddd 1px; padding:5px">
-                
-                 
-                
-
-                </p>
-                
-
-                <p style="clear:both">
-                    {{--  When you're using get() you get a collection. In this case you need to iterate over it to get properties:         --}}                    
+                <p style="clear:both">                    
                     @foreach($location_data as $object)
                     @php
                         $user_data = App\User::where('id', $object->user_id)->first();        
