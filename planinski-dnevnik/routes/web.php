@@ -28,6 +28,9 @@ Route::get('/refresh', function () {
     return view('home');
 });
 
+Route:get('/location/{$loc}', function(){
+    
+});
 
 
 Route::get('/home', 'HomeController@index');

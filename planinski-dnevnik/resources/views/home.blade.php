@@ -63,11 +63,11 @@
                         });
                     });
                     </script>
-                        {{Form::open(array('url' => 'home'))}}
-                            <p>
-                            <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Refresh">
-                            </p>
-                        {{Form::close()}}
+                        
+                            
+                            <a href="/home" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;">Refresh</a>
+                            
+                        
             </div>
         </div>
     </div>
