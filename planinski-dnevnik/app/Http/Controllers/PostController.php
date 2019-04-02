@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Location;
 class PostController extends Controller
 {
     /**
@@ -49,7 +49,8 @@ class PostController extends Controller
         $post->lon = $lon;
         $post->save();
 
-        return back();
+        $location = Location::where('id', $loc_id)->first();
+        return view('profile', ['location'=>$location]);
     }
 
     /**
