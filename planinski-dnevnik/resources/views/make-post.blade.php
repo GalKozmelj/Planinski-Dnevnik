@@ -13,6 +13,7 @@ Trenutno ste na/v:  {{link_to_action('LocationController@redirect', $location->n
     {{ Form::hidden('user_id', Auth::user()->id, ['required' => 'required'])}}
     {{ Form::hidden('lat', $lat, ['required' => 'required'])}}
     {{ Form::hidden('lon', $lon, ['required' => 'required'])}}
+    <br>
     {{ Form::submit('Dodaj') }}
   {{Form::close()}}
 </div>
