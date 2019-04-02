@@ -55,6 +55,9 @@
                         <p>
                             <input type="submit" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;" value="Check location">
                         </p>
+                            {{Form::hidden('lat',$location->lat)}}
+                            {{Form::hidden('lon',$location->lon)}}
+                            {{Form::hidden('location_id',$location->id)}}
                         {{Form::close()}}
 
 

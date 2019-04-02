@@ -21,7 +21,7 @@ Route::get('seznam', function () {
 });
 
 Route::post('/check_location', 'CheckLocationController@check');
-
+Route::get('/check_location/store', 'CheckLocationController@store');
 
 Route::get('/refresh', function () {
     return view('home');
