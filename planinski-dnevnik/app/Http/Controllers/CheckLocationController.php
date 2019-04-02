@@ -36,12 +36,6 @@ class CheckLocationController extends Controller
             }
         }
 
-        $userlocation = new UserLocation;
-        $userlocation->user_id = $user_id;
-        $userlocation->location_id = $location_id;
-        $userlocation->bool = true;
-        $userlocation->save();
-
         return response()->json(['result'=>'bravo šlo je :)']);
     }
 
