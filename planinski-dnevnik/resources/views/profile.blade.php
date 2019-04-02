@@ -80,7 +80,7 @@
                         <p style="float:left"><img width="50px;" height="50px;" src="svg/user_icon.png" alt="user_icon">
 
 
-                    {{$user_data->name}}
+                    {{$user_data->name}}:
                     {{ $object->content }}
                     @endforeach
                 </p>
