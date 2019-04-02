@@ -70,7 +70,7 @@
                 </p>
                 
 
-                <p style="clear:both"><b>Post desc</b> 
+                <p style="clear:both">
                     {{--  When you're using get() you get a collection. In this case you need to iterate over it to get properties:         --}}                    
                     @foreach($location_data as $object)
                     @php
