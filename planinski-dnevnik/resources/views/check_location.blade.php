@@ -31,9 +31,6 @@
         });
     });
     </script>
-
-
-
 @php
-header("Refresh:3; url=seznam");
+  header("Refresh:3; url=seznam");
 @endphp

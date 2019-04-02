@@ -26,7 +26,7 @@
             @if($object->bool)
                     {{'✅'}}
             @endif
-            <span style="float: right;">{{$object->created_at}}</span>
+            <span style="float: right;">{{date('d/m/Y',strtotime($object->created_at))}}</span>
             </p>
         @endforeach
 

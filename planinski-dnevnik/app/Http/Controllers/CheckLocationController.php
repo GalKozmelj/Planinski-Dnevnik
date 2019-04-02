@@ -27,8 +27,8 @@ class CheckLocationController extends Controller
         $location = Location::where('id', $location_id)->first();
         
         if(!UserLocation::where('user_id', $user_id)->where('location_id', $location_id)->exists()){
-            if($location->lat <= $lat+0.011 || $location->lat >= $lat-0.011){
-                if($location->lon <= $lon+0.011 || $location->lon >= $lon-0.011){
+            if($location->lat <= $lat+0.011 && $location->lat >= $lat-0.011){
+                if($location->lon <= $lon+0.011 && $location->lon >= $lon-0.011){
                     $userlocation = new UserLocation;
                     $userlocation->user_id = $user_id;
                     $userlocation->location_id = $location_id;
