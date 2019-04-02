@@ -64,8 +64,9 @@
                     });
                     </script>
                         
-                            
-                            <a href="/home" style="width:100%;background-color:#abe;border: 1px solid #fff; color: white;padding-top:5px;padding-bottom:5px;">Refresh</a>
+                            <div style="width:100%;background-color:#abe; text-align:center;padding:10px;">
+                                <a style="padding:10px;;color:white" href="/home">Refresh</a>
+                            </div>
                             
                         
             </div>
