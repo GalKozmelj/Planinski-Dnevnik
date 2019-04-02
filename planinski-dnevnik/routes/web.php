@@ -28,13 +28,7 @@ Route::get('/refresh', function () {
     return view('home');
 });
 
-Route::get('/location/{$loc_name}', function($loc_name){
-    $location = Location::where('name', $name)->orWhere('name', 'like', '%'.$name.'%')->first();
-    $posts = Post::where('location_id', $location->id)->get();
-
-    return view('profile', ['location' => $location, 'posts' => $posts]);
-});
-
+Route::get('/location/{loc_name}', 'LocationController@redirect');
 
 Route::get('/home', 'HomeController@index');
 
