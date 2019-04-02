@@ -20,9 +20,8 @@ Route::get('seznam', function () {
     return view('seznam');
 });
 
-Route::get('/check_location', function () {
-    return view('check_location');
-});
+Route::post('/check_location', 'CheckLocationController@check');
+
 
 Route::get('/refresh', function () {
     return view('home');
