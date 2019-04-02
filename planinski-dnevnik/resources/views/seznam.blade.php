@@ -22,7 +22,7 @@
 
 
 
-        @foreach($location_data as $object)
+        @foreach($user_data as $object)
         @php
             $user_data = App\User::where('id', $object->user_id)->first();        
         @endphp
