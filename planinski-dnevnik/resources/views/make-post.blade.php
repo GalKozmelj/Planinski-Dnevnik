@@ -1,6 +1,6 @@
 
 <div class="card" style="margin-top: 5px; color: black;">
-  Trenutno ste na/v:  <a href="/profile">{{$loc->name}}</a>
+Trenutno ste na/v:  <a href="/profile/{{$loc->name}}">{{$loc->name}}</a>
 
   {{ Form::open(array('route' => 'posts.store')) }}
     {{ Form::textarea('content', '', ['required' => 'required', 'placeholder' => 'Post content'])}}
